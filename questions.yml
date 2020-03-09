@@ -1,0 +1,37 @@
+question: |
+#  ### Request for Online Trial by Written Declaration
+subquestion: |
+
+#  add the privacy statement later
+#  under: |
+#  Read our [Privacy Policy](http://www.courts.ca.gov/11530.htm)
+# *This online system is an optional way to request if you qualify, to request a "Trial by Written Declaration". If you have been charged with a traffic infraction or a violation of a local ordinance adopted under the vehicle code, you can request an online trial by written declaration unless you are issued a ticket for an offense involving alcohol or drugs or the violation requires a mandatory appearance in court.*
+
+#
+# **Use this tool to:**
+#
+# * You were issued a ticket for infraction violations only.
+# * The due date for your ticket has not passed, and
+# * Your ticket or courtesy notice does not say that you must appear in court.
+#
+field: landing_page_visited
+prevent going back: True
+---
+id: citation-lookup
+question: |
+#  ### Look Up Your Citation
+progress: 15
+fields:
+#- "What California county did you get the citation in?": county
+  choices:
+  - "San Francisco": San Francisco
+  - "Shasta": Shasta
+  - "Tulare": Tulare
+  - "Ventura": Ventura
+#- "What's the citation number?": citation_number
+  required: false
+#- "I don't have my citation number": citation_number_absent
+  datatype: yesno
+#########################################################
+continue button field: completed_citation_form
+---
